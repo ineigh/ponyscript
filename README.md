@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 -- PONYSCRIPT BY Z --
 
 With this simple bash script, you can create a music pack for Mario Kart Wii in no time!
@@ -88,7 +87,3 @@ mc3: SNES Mario Circuit 3
 rPB: DS Peach Gardens
 dkm: GCN DK Mountain
 rBC: N64 Bowser's Castle
-=======
-# ponysay
-bash script to create Mario Kart Wii music packs in minutes! 
->>>>>>> 956e15f8c65ea6cb72a4bca339fa266c86b59ab3
