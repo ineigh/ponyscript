@@ -1,0 +1,126 @@
+{
+        "lcmc": {
+                "1": "n_circuit32_n",
+                "2": "n_circuit32_f"
+        },
+        "mmm": {
+                "1": "n_farm_n",
+                "2": "n_farm_f"
+        },
+        "mg": {
+                "1": "n_kinoko_n",
+                "2": "n_kinoko_f"
+        },
+        "tf": {
+                "1": "STRM_N_FACTORY_N",
+                "2": "STRM_N_FACTORY_F"
+        },
+        "cm": {
+                "1": "n_shopping32_n",
+                "2": "n_shopping32_f"
+        },
+        "dks": {
+                "1": "n_snowboard32_n",
+                "2": "n_snowboard32_f"
+        },
+        "wgm": {
+                "1": "STRM_N_TRUCK_N",
+                "2": "STRM_N_TRUCK_F"
+        },
+        "dc": {
+                "1": "n_daisy32_n",
+                "2": "n_daisy32_f"
+        },
+        "kc": {
+                "1": "STRM_N_WATER_N",
+                "2": "STRM_N_WATER_F"
+        },
+        "mt": {
+                "1": "n_maple_n",
+                "2": "n_maple_f"
+        },
+        "gv": {
+                "1": "n_volcano32_n",
+                "2": "n_volcano32_f"
+        },
+        "ddr": {
+                "1": "STRM_N_DESERT_N",
+                "2": "STRM_N_DESERT_F"
+        },
+        "mh": {
+                "1": "STRM_N_RIDGEHIGHWAY_N",
+                "2": "STRM_N_RIDGEHIGHWAY_F"
+        },
+        "bcw": {
+                "1": "STRM_N_KOOPA_N",
+                "2": "STRM_N_KOOPA_F"
+        },
+        "rr": {
+                "1": "n_rainbow32_n",
+                "2": "n_rainbow32_f"
+        },
+        "rPB": {
+                "1": "r_gc_beach32_n",
+                "2": "r_gc_beach32_f"
+        },
+        "rYF": {
+                "1": "r_ds_jungle32_n",
+                "2": "r_ds_jungle32_f"
+        },
+        "gv2": {
+                "1": "r_sfc_obake32_n",
+                "2": "r_sfc_obake32_f"
+        },
+        "rMR": {
+                "1": "r_64_circuit32_n",
+                "2": "r_64_circuit32_f"
+        },
+        "rSL": {
+                "1": "r_64_sherbet32_n",
+                "2": "r_64_sherbet32_f"
+        },
+        "rSGB": {
+                "1": "r_agb_beach32_n",
+                "2": "r_agb_beach32_f"
+        },
+        "dsds": {
+                "1": "r_ds_town32_n",
+                "2": "r_ds_town32_f"
+        },
+        "rWS": {
+                "1": "r_gc_stadium32_n",
+                "2": "r_gc_stadium32_f"
+        },
+        "rDH": {
+                "1": "r_ds_desert32_n",
+                "2": "r_ds_desert32_f"
+        },
+        "bc3": {
+                "1": "r_agb_kuppa32_n",
+                "2": "r_agb_kuppa32_f"
+        },
+        "dkjp": {
+                "1": "r_64_jungle32_n",
+                "2": "r_64_jungle32_f"
+        },
+        "rMC": {
+                "1": "r_gc_circuit32_n",
+                "2": "r_gc_circuit32_f"
+        },
+        "mc3": {
+                "1": "r_sfc_circuit32_n",
+                "2": "r_sfc_circuit32_f"
+        },
+        "rPG": {
+                "1": "r_ds_garden32_n",
+                "2": "r_ds_garden32_f"
+        },
+        "dkm": {
+                "1": "r_gc_mountain32_n",
+                "2": "r_gc_mountain32_f"
+        },
+        "rBC": {
+                "1": "r_64_kuppa32_n",
+                "2": "r_64_kuppa32_f"
+        }
+}
