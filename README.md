@@ -1,4 +1,4 @@
--- PONYSCRIPT BY Z --
+-- PONYSCRIPT --
 
 With this simple bash script, you can create a music pack for Mario Kart Wii in no time!
 
@@ -17,19 +17,24 @@ Simply copy the file containing the song you want to the folder with the acronym
 
 For example, if you have a song.mp3 file that you want to use for Bowser's Castle, simply copy it to the bcw folder!
 
+To create the necessary folders, simply execute ./makefolders.sh. If on terminal, make sure to have cd'd properly into the /ponyscript directory! (how to do this is explained in a later step)
+
 You don't need to copy a file into each of the 32 folders, if you just want to create BRSTMs for Waluigi Stadium, Toad's Factory and Koopa Cape, copy the corresponding files to the rWS, tf and kc folders while the rest remain empty.
 
 Once you've copied the files you want, you can right click the file ponyscript.sh and execute it if your file explorer allows for that, otherwise follow these steps inside a terminal:
 
-cd into the ponyscript/ directory
+cd into the ponyscript/ directory:
 $ cd ponyscript/
 
-Execute the script
+Execute the script:
 $ ./ponyscript.sh
 
 Simply wait until the script finishes converting all your files into BRSTMs, you'll see a cute pony when it does, afterwards you'll be asked if you want to clean all the folders for every track, I recommend doing this as the script will create the files "onetwo.wav" and "final.wav", so if you don't delete them first you will not be able to create a BRSTM for that track!
 
 Finally, all of your BRSTMs will be waiting for you inside the "output" folder, you may copy and paste them into your My Stuff folder without having to rename them!
+
+NOTE: If the scripts are not executable, run:
+$ chmod +x ponyscript.sh makefolders.sh 
 
 -- CONSIDERATIONS --
 
@@ -39,17 +44,15 @@ Please, only use audio files (.mp3, .ogg, .flac, .opus, something ffmpeg can con
 
 This script does NOT normalize audio volume, so make sure your files are loud enough.
 
-This script relies on the names.json file for the filenames, don't delete it.
+This script relies on the names.json file for the file names, don't delete it.
 
 Depending on your CPU and the number of files to convert this script may take some time.
 
-If for some reason the ponyscript.sh file is not executable, simply execute:
-
-$ chmod +x ponyscript.sh
+I made this script with flexibility in mind, if you want to expand the track list (for Retro Rewind or what have you) you can add as many tracks as you want to the names.json file, just make sure everything is formatted correctly and that there's a folder for that track inside the ponyscript directory.
 
 -- ACRONYMS --
 
-lcmc: Luigi and Mario Circuit (they use the same file)
+lcmc: Luigi and Mario Circuit (they use the same files)
 mmm: Moo Moo Meadows
 mg: Mushroom Gorge
 tf: Toad's Factory

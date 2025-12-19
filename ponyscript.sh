@@ -18,12 +18,12 @@ for folder in "$BASE_DIR"/*/; do
                     echo "There was an error converting the file in $folder to WAV"
                     ((errors++))
                     continue
-                fi # end of if checking if wav conversion was successful
+                fi 
             else
                 if [ "$file" != ""$folder"onetwo.wav" ]; then
                     mv "$file" "$folder/onetwo.wav"
                 fi
-            fi # end of if checking if file is wav
+            fi 
             ffmpeg -loglevel quiet -i "$file" -filter:a "atempo=1.1" ""$folder"final.wav"
             if [ $? -eq 0 ]; then
                 case "$WORK_DIR" in
@@ -50,25 +50,13 @@ for folder in "$BASE_DIR"/*/; do
             else
                 ((errors++))
                 continue
-            fi # end of if checking last lap creation
-        fi # end of if checking if theres only one file in directory
-    fi # end of if checking folder isnt the output folder
+            fi 
+        fi 
+    fi 
 done
 
-echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⣼⡸⢶⡡⢇⡠⠔⡊⠩⢉⠶⡦⠀"
-echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠈⡇⠸⠁⠀⠂⠤⡈⠢⠀⠈⠮⣆"
-echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠨⡄⠰⣐⣇⠃⡀⠀⠈⢺⢣⣄⠘⡈"
-echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠸⣰⢸⢏⢄⠋⠀⣬⡿⠉⠾⡈⠉"
-echo "⠀⠀⠀⢀⠔⣲⡿⢇⢶⢄⢨⠣⡈⢸⡈⢲⡇⢄⡀⠻⠴⠋⠁⠀"
-echo "⠀⠀⣰⣵⡞⢊⠀⠀⠐⢻⣿⠓⢍⡘⡕⡠⣵⡘⠀⠀⠀⠀⠀⠀"
-echo "⠀⠀⢡⠏⠀⠄⢠⠃⢀⣡⠙⢄⠀⠀⣇⠇⠽⠡⠒⡄⠀⠀⠀⠀"
-echo "⠀⠀⠘⡁⠀⡗⣼⠀⢰⠈⢀⢼⠒⠀⠓⢀⠔⠀⡇⢠⠀⠀⠀⠀"
-echo "⠀⠀⣀⡇⠀⡀⡿⠀⡜⠀⠀⣼⠀⠀⠀⢊⠀⢠⢁⠆⠀⠀⠀⠀"
-echo "⠀⢀⠟⠃⣼⣧⠃⠀⠑⠄⡠⠋⠀⠀⠀⠈⠒⠁⠀⠀⠀⠀⠀⠀"
-echo "⠀⠀⣜⡴⠃⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo "⠐⠊⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo "Successes: $successes"
+cat pony.txt
+echo "Converted: $successes"
 echo "Errors: $errors"
 read -p "We're all set! Would you like to clean up? (y/N): " answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
