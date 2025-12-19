@@ -42,8 +42,6 @@ This script expects ONE FILE inside each folder, if there's 2 or more files (or 
 
 Please, only use audio files (.mp3, .ogg, .flac, .opus, something ffmpeg can convert into .wav), if you use .wav files from the get-go the script will be faster as ffmpeg will not try to convert them to .wav
 
-This script does NOT normalize audio volume, so make sure your files are loud enough.
-
 This script relies on the names.json file for the file names, don't delete it.
 
 Depending on your CPU and the number of files to convert this script may take some time.

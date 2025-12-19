@@ -1,5 +1,7 @@
 #!/bin/bash
 BASE_DIR="$(dirname "$(realpath "$0")")"
+LOUDER="volume=3dB" # You can edit this value to make your files louder or quieter, I've found 3dB to be the sweet spot for me
+FASTER="atempo=1.1" # Likewise, if you'd like your final laps to play faster or slower, you can edit this value
 errors=0
 successes=0
 
@@ -9,8 +11,12 @@ for folder in "$BASE_DIR"/*/; do
         file_count=$(find "$folder" -maxdepth 1 -type f | wc -l)
         if [ $file_count == 1 ]; then
             file=$(find "$folder" -maxdepth 1 -type f)
+            ext="${file##*.}"
+            tmp="${file}.tmp.${ext}"
+            ffmpeg -y -i "$file" -filter:a "$LOUDER" "$tmp"
+            mv "$tmp" "$file"
             if [[ "$file" != *.wav ]]; then
-                ffmpeg -loglevel quiet -i "$file" ""$folder"onetwo.wav"
+                ffmpeg -loglevel quiet -i "$file" "${folder}onetwo.wav"
                 if [ $? -eq 0 ]; then
                     rm "$file"
                     file=$(find "$folder" -maxdepth 1 -type f)
@@ -20,11 +26,11 @@ for folder in "$BASE_DIR"/*/; do
                     continue
                 fi 
             else
-                if [ "$file" != ""$folder"onetwo.wav" ]; then
-                    mv "$file" "$folder/onetwo.wav"
+                if [ "$file" != "${folder}onetwo.wav" ]; then
+                    mv "$file" "${folder}onetwo.wav"
                 fi
             fi 
-            ffmpeg -loglevel quiet -i "$file" -filter:a "atempo=1.1" ""$folder"final.wav"
+            ffmpeg -loglevel quiet -i "$file" -filter:a "$FASTER" ""$folder"final.wav"
             if [ $? -eq 0 ]; then
                 case "$WORK_DIR" in
                     tf|wgm|ddr|mh)
